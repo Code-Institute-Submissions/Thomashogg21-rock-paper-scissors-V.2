@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: auto;
+    box-sizing: border-box; 
+ }
+ 
+ body {
+     background-color: gray;
+ }
+ 
+ header {
+     background: white;
+     padding: 30px;
+ }
+ 
+ header > h1 {
+     color: black;
+     text-align: center;
+     font-family: 'Times New Roman', sans-serif;
+ }
+ 
+ .score-board {
+     margin: auto;
+     margin-top: 15px;
+     border: 4px solid white;
+     width: 175px;
+     color: white;
+     font-size: 30px;
+     text-align: center;
+     padding: 15px 25px;
+     font-family: 'Times New Roman', sans-serif;
+     position: relative;
+ }
+ 
+ .badge {
+     background: orange;
+     font-size: 20px;
+     padding: 4px 10px;
+     font-family: 'Times New Roman', sans-serif;
+ }
+ 
+ #player-label {
+     position: absolute;
+     top: 20px;
+     left: -50px;
+ }
+ 
+ #computer-label {
+     position: absolute;
+     top: 20px;
+     left: 125px;
+ }
+ 
+ .answer {
+     color: white;
+     font-size: 35px;
+     padding-top: 10px;  
+ }
+ 
+ .answer > p {
+     text-align: center;
+     font-weight: bold;
+     font-family: 'Times New Roman', sans-serif;
+ }
+ 
+ .options {
+     margin: 50px 0;
+     text-align: center;
+ }
+ 
+ .option {
+     display: inline-block;
+     margin: 0 15px;
+     padding: 10px;
+ }
+ 
+ p {
+     text-align: center;
+     font-size: 30px;
+     color: white;
+     font-weight: bold;
+     font-family: 'Times New Roman', sans-serif;
+ }
+ 
+ .option:hover {
+     cursor: pointer;
+     background: darkgrey;
+ }
