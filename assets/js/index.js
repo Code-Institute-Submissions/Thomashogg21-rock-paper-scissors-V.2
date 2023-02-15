@@ -1,9 +1,9 @@
-const playerScore = 0;
-const npcScore = 0;
+var playerScore = 0;
+var computerScore = 0;
 const playerScore_ = document.getElementById("player-score");
-const npcScore_ = document.getElementById("computer-score");
+const computerScore_ = document.getElementById("computer-score");
 const scoreBoard = document.querySelector(".score-board");
-const answer = document.querySelector(".answer");
+const answer = document.querySelector(".answer > p");
 const rock = document.getElementById("r");
 const paper = document.getElementById("p");
 const scissors = document.getElementById("s");
@@ -14,6 +14,26 @@ function getComputerOption() {
     return options[randomOption];
 }
 
+function characterToWord(character) {
+    if (character === "r") return "Rock";
+    if (character === "p") return "Paper";
+    return "Scissors";
+}
+
+function lose() {
+
+}
+
+function draw() {
+
+}
+
+function win(playerOption, computerOption) {
+    playerScore++;
+    playerScore_.innerHTML = playerScore;
+    computerScore_.innerHTML = computerScore;
+    answer.innerHTML = characterToWord(playerOption) + " is no match for " + characterToWord(computerOption) + "! You win!"
+}
 
 function play(userOption) {
     const computerOption = getComputerOption();
@@ -21,17 +41,17 @@ function play(userOption) {
         case "rs":
         case "pr":
         case "sp":
-            console.log("You Win!");
+            win(userOption, computerOption);
             break;
         case "rp":
         case "ps":
         case "sr":
-          console.log("You Lose!");
+          lose(userOption, computerOption);
           break;
         case "rr":
         case "pp":
         case "ss":
-            console.log("Draw!")
+            draw(userOption, computerOption);
             break;
 
           
