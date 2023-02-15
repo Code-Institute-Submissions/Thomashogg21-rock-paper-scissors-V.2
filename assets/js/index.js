@@ -1,3 +1,4 @@
+//Caching the DOM helps to store code so that you dont have to keep writing the same code over again.
 var playerScore = 0;
 var computerScore = 0;
 const playerScore_ = document.getElementById("player-score");
