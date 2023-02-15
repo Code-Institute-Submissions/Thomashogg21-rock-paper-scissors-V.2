@@ -20,12 +20,17 @@ function characterToWord(character) {
     return "Scissors";
 }
 
-function lose() {
-
+function lose(playerOption, computerOption) {
+    computerScore++;
+    playerScore_.innerHTML = playerScore;
+    computerScore_.innerHTML = computerScore;
+    answer.innerHTML = characterToWord(playerOption) + " is no match for " + characterToWord(computerOption) + "! You lose!"
 }
 
-function draw() {
-
+function draw(playerOption, computerOption) {
+    playerScore_.innerHTML = playerScore;
+    computerScore_.innerHTML = computerScore;
+    answer.innerHTML = characterToWord(playerOption) + " is equal to " + characterToWord(computerOption) + "! It's a draw!"
 }
 
 function win(playerOption, computerOption) {
