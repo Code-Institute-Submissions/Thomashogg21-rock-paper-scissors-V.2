@@ -14,15 +14,29 @@ function getComputerOption() {
     return options[randomOption];
 }
 
-console.log(getComputerOption());
 
 function play(userOption) {
     const computerOption = getComputerOption();
-    console.log("user option => " + userOption);
-    console.log("computer option => " + computerOption);
-}
+    switch (userOption + computerOption) {
+        case "rs":
+        case "pr":
+        case "sp":
+            console.log("You Win!");
+            break;
+        case "rp":
+        case "ps":
+        case "sr":
+          console.log("You Lose!");
+          break;
+        case "rr":
+        case "pp":
+        case "ss":
+            console.log("Draw!")
+            break;
 
-play("G");
+          
+    }
+}
 
 function main() {
     rock.addEventListener('click', function() {
